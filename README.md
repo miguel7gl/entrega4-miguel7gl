@@ -31,8 +31,13 @@ Una vez entras en la página debes de intrducir el nombre de la ciudad que desea
 Si se introduce un lugar válido, al pulsar el botón se llamara a una función fetch que almacenará toda la información en una variable data. Apartir de ahi se van eligiendo y almacenando los diferentes valores que posteriormente aparecen en la página:
 
 - Nombre de la ciudad
+
 - Icono
+
 - Temperatura
+
 - Temperatura máxima
+
 - Temperatura mínima
+
 - Descripción
