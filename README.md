@@ -1,10 +1,5 @@
 # Práctica 4: Consume un API REST JSON y visualizalo en un documento web
 
-El alumno empleando los conocimientos adquirido en el aula sobre 
-HTML, CSS y Javascript, creará un documento web que permita 
-interaccionar con una API REST y visualice en el documento la información.
-El documento empleará el Framework CSS Bootstrap.
-
 
 En esta práctica se va a crear una página web utilizando HTML, CSS y Javascript (vistos en las sesiones de clase) con la cuál se podrá interaccionar con una API REST y ver en el documento su información. A su vez también se utilizará el Framework CSS Bootstrap.
 
