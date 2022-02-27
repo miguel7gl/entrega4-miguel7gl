@@ -22,4 +22,17 @@ El site contiene los siguientes elementos:
 - Footer
 
 
-El link de la página es la siguiente: https://miguel7gl.github.io/entrega4-miguel7gl/.  
+El link de la página es la siguiente: https://miguel7gl.github.io/entrega4-miguel7gl/.
+
+## Funcionamiento
+
+Una vez entras en la página debes de intrducir el nombre de la ciudad que deseas buscar. Si introduces un nombre incorrecto saltará una alerta diciendo: Nombre incorrecto de la ciudad!
+
+Si se introduce un lugar válido, al pulsar el botón se llamara a una función fetch que almacenará toda la información en una variable data. Apartir de ahi se van eligiendo y almacenando los diferentes valores que posteriormente aparecen en la página:
+
+- Nombre de la ciudad
+- Icono
+- Temperatura
+- Temperatura máxima
+- Temperatura mínima
+- Descripción
