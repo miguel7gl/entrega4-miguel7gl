@@ -2,15 +2,25 @@
 let button= document.querySelector('.submit');
 
 //URLs para la búsqueda de datos
-const cors = 'https://cors-anywhere.herokuapp.com/';
-const urlPecioMejor = 'https://api.preciodelaluz.org/v1/prices/cheapests?zone=PCB&n=1';
-const urlPrecios = 'https://api.preciodelaluz.org/v1/prices/all?zone=PCB';
+const urlPrecios = 'https://api.esios.ree.es/indicators/';
+const token = "67ff456a8376fbbb16a69c06b925535675ccc05b153c04f28219a66013a810c5";
+
+/*
+const headers = {
+  Accept: application/json, application/vnd.esios-api-v1+json,
+  Content-Type: application/json,
+  Host: api.esios.ree.es,
+  Authorization: token="67ff456a8376fbbb16a69c06b925535675ccc05b153c04f28219a66013a810c5"
+};
+*/
 
 //Definimos lo que hace el boton cuando es pulsado
 button.addEventListener('click', function(name){
-  fetch(cors+urlPrecios)
+  fetch(urlPrecios, {Authorization: Token token='67ff456a8376fbbb16a69c06b925535675ccc05b153c04f28219a66013a810c5'})
   .then(response => response.json())
   .then(data => {
+
+    console.log(data);
 
     //Creamos una variable body donde almacenamos los datos
     let body = '';
@@ -27,6 +37,18 @@ button.addEventListener('click', function(name){
     document.getElementById('datos').innerHTML = body;
     
     /*
+    console.log('Hola');
+    let body = '';
+
+    for (let i=0; i<data.length; i++){
+      body += i;
+      console.log(i);
+    }
+    console.log('Adios');
+
+    document.getElementById('prueba').innerHTML = body;
+    */
+
     var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "line",
@@ -53,9 +75,7 @@ button.addEventListener('click', function(name){
           },
         ],
       },
-    
     });
-    */
   })
   .catch(err => alert("Error en el acceso a los datos"));
-})
+  })
